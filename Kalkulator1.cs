@@ -8,23 +8,24 @@ namespace Lab1
 {
     class Kalkulator1 : ICalculator
     {
-        public int Id => 1;
-        public string Name => "Metoda Kwadratów";
+        public int Id => 2;
+        public string Name => "Metoda trapezow";
 
         public decimal GetIntegralValue(IFunction function, decimal rangeFrom, decimal rangeTo)
         {
             decimal powierzchnia = 0;
-            decimal krok = ((decimal)rangeTo - (decimal)rangeFrom) / (decimal)99;
-            decimal x = rangeFrom + krok / 2;
 
-            for (int i = 1; i <= 99; i++)
+            decimal krok = ((decimal)rangeTo - (decimal)rangeFrom) / 99;
+            decimal x = rangeFrom;
+
+
+            for (int i = 1; i < 99; i++)
             {
-                powierzchnia += function.GetY(x) * krok;
-                x += krok;
+                powierzchnia += function.GetY(rangeFrom + i * krok);
             }
 
-            Console.WriteLine("Przybliżona wartość całki przy wariancie środkowych kwadratów :" + powierzchnia);
-
+            powierzchnia = (powierzchnia + (function.GetY(rangeFrom) + function.GetY(rangeTo)) / 2) * krok;
+            Console.WriteLine("Przybliżona wartość całki metodą trapezów :" + powierzchnia);
             return powierzchnia;
         }
     }
