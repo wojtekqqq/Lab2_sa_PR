@@ -1,22 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Lab1
+﻿namespace Lab2_sa
 {
     class Przedzial3 : IPrzedzialy
     {
         public int Id => 3;
         public string Name => "Przedział trzeci od -5 do 0";
 
-        public decimal rangeFrom()
+        public decimal RangeFrom()
         {
             return -5;
         }
 
-        public decimal rangeTo()
+        public decimal RangeTo()
         {
             return 0;
         }

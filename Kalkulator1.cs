@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Lab1
+namespace Lab2_sa
 {
     class Kalkulator1 : ICalculator
     {
@@ -15,11 +11,11 @@ namespace Lab1
         {
             decimal powierzchnia = 0;
 
-            decimal krok = ((decimal)rangeTo - (decimal)rangeFrom) / 99;
-            decimal x = rangeFrom;
+            decimal krok = (rangeTo - rangeFrom) / 100;
+  
 
 
-            for (int i = 1; i < 99; i++)
+            for (int i = 1; i < 100; i++)
             {
                 powierzchnia += function.GetY(rangeFrom + i * krok);
             }

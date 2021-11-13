@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Lab1
+﻿namespace Lab2_sa
 {
    public class Funkcja1 : IFunction
 
@@ -17,8 +11,6 @@ namespace Lab1
         public decimal GetY(decimal x)
         {
             return 2 * x + 2 * x * x;
-
-
         }
     }
 }
